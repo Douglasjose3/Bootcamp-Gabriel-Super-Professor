@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App da Vanessa</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" type="module" defer></script>
+  </head>`
+  <body>
+
+    <!-- Fuso Horário -->
+     <!-- key do tempo: af8362666c3dae38f850242223ed3719 -->
+     <section class="section section--fuso">
+      <h1 class="heading">Fuso horário</h1>
+      <form class="section section--fuso">
+        <select id="Fuso">
+          <option value="" id="searchCity">Cidades</option>
+        </select>
+        <ul>
+          <li>
+            <p id="fusoTempo">Tempo</p>
+          </li>
+          <li>
+            <p id="fusoHorario">Fuso horário</p>
+          </li>
+          <li>
+            <p id="fusoPais">País</p>
+          </li>
+          <li>
+            <p id="fusoCapital">Capital</p>
+          </li>
+          <li>
+            <p id="fusoContinente">Continente</p>
+          </li>
+        </ul>
+      </form>
+     </section>
+
+    <!-- Conversor de medidas-->
+    <section class="section section-medidas">
+      <h1 class="heading">Conversor de medidas</h1>
+      <form class="formMedidas">
+        <div class="input-group">
+          <div class="input-container">
+            <label for="centimetros">Inches para Centímetros</label>
+            <input type="text" class="input" id="centimetros" placeholder="Digite o valor em Inches">
+          </div>
+          <div class="input-container">
+            <label for="cmParaInches">Centímetros para Inches</label>
+            <input type="text" class="input" id="cmParaInches" placeholder="Digite o valor em Centímetros">
+          </div>
+        </div>
+    
+        <div class="input-group">
+          <div class="input-container">
+            <label for="quilometros">Milhas para Quilômetros</label>
+            <input type="text" class="input" id="quilometros" placeholder="Digite o valor em Milhas">
+          </div>
+          <div class="input-container">
+            <label for="kmParaMiles">Quilômetros para Milhas</label>
+            <input type="text" class="input" id="kmParaMiles" placeholder="Digite o valor em Quilômetros">
+          </div>
+        </div>
+    
+        <div class="input-group">
+          <div class="input-container">
+            <label for="peso">Pounds para Quilos</label>
+            <input type="text" class="input" id="peso" placeholder="Digite o valor em Pounds">
+          </div>
+          <div class="input-container">
+            <label for="poundsParaKg">Quilos para Pounds</label>
+            <input type="text" class="input" id="poundsParaKg" placeholder="Digite o valor em Quilos">
+          </div>
+        </div>
+      </form>
+    
+      <div>
+        <button type="button" class="button" id="medidasButton">Converter</button>
+        <button type="button" class="buttonReset" id="medidasLimparButton">Limpar</button>
+      </div>
+      <p id="resultsMedidas"></p>
+    </section>
+    
+    
+
+    <!-- Terremoto -->
+    <section class="section section--earthQuake">
+        <h1 class="heading">Localizador Global de Terremotos</h1>
+        <div class="earthquake__container">
+            <div class="earthquake__form">
+                <input 
+                    type="text" 
+                    id="locationInput" 
+                    class="earthquake__input" 
+                    placeholder="Digite cidade, país ou coordenadas (lat,lon)"
+                >
+                <button 
+                    id="searchButton" 
+                    class="earthquake__button"
+                >
+                    Buscar
+                </button>
+            </div>
+            <div id="resultsContainer" class="earthquake__results">
+                <p>Os terremotos próximos aparecerão aqui.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contagem regressiva para o Ano Novo -->
+    <section class="section section--new-year">
+      <h1 class="heading">Falta pouco</h1>
+      <div class="container">
+        <div class="timer">
+          <span class="timer__value" id="days">45</span>
+          <p class="paragraph">dias</p>
+        </div>
+        <div class="timer">
+          <span class="timer__value">|</span>
+        </div>
+        <div class="timer">
+          <span class="timer__value" id="hours">11</span>
+          <p class="paragraph">horas</p>
+        </div>
+        <div class="timer">
+          <span class="timer__value">:</span>
+        </div>
+        <div class="timer">
+          <span class="timer__value" id="minutes">33</span>
+          <p class="paragraph">minutos</p>
+        </div>
+        <div class="timer">
+          <span class="timer__value">:</span>
+        </div>
+        <div class="timer">
+          <span class="timer__value" id="seconds">13</span>
+          <p class="paragraph">segundos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conversor de Temperatura -->
+    <section class="section section--converter">
+      <h1 class="heading">Conversor de <br />Fahrenheit para Celsius</h1>
+      <form id="formTemp">
+        <label class="label" for="fahrenheit"
+          >Digite a temperatura em Fahrenheit:</label
+        >
+        <input
+          class="input"
+          type="text"
+          id="fahrenheit"
+          placeholder="Exemplo: 100"
+        />
+      </form>
+      <div>
+        <button class="button" id="convertButton" type="button">Converter</button>
+        <button class="buttonReset" id="resetButton" type="button">Limpar</button>
+      </div>
+      <p id="result"></p>
+    </section>
+
+    <!-- Conversor de Moedas -->
+    <section class="section section--currency">
+      <h1 class="heading">Conversor de moedas</h1>
+      <h2 id="dolar-index">Índice do dólar: Carregando...</h2>
+      <form id="formMoeda">
+        <label class="label" for="reais">Reais</label>
+        <input class="input" type="text" id="reais" placeholder="Exemplo 500" />
+        <label class="label" for="dolar">Dólar</label>
+        <input class="input" type="text" id="dolar" placeholder="Exemplo 500" />
+      </form>
+      <div>
+        <button class="button" id="button-convert">Converter</button>
+        <button class="buttonReset" id="button-reset-moeda">Limpar</button>
+      </div>
+      <p id="results-currency"></p>
+    </section>
+
+    <!-- Compra Dólar -->
+    <section class="section section--shopping">
+      <h1 class="heading">Compra de Dólares</h1>
+      <form id="formDolar">
+        <label class="label" for="quantidade">Quantidade em $</label>
+        <input class="input" type="text" id="quantidade" placeholder="Exemplo 2000" />
+        <label class="label" for="cotacaoDolar">Cotação do Dólar</label>
+        <input class="input" type="text" id="cotacaoDolar" placeholder="Exemplo 6.3" />
+      </form>
+      <div class="butttonDolar">
+        <button class="button" id="button-dolar" type="button">Calcular</button>
+        <button class="buttonReset" id="button-reset-compra" type="button">Limpar</button>
+      </div>
+      <p id="results-dolar"></p>
+    </section>
+
+    <!-- Combustível -->
+    <section class="section section--fuel">
+      <h1 class="heading">Gasolina ou Álcool</h1>
+      <form class="formCombustivel">
+        <div>
+          <label class="label label-combustivel" for="gasolina">Preço da Gasolina (R$)</label>
+          <input
+            class="input input-combustivel"
+            type="number"
+            id="gasolina"
+            placeholder="Exemplo 5.50"
+          />
+        </div>
+        
+        <div>
+          <label class="label label-combustivel" for="consumoGasolina">Consumo Gasolina (km/l)</label>
+          <input
+            class="input input-combustivel"
+            type="number"
+            id="consumoGasolina"
+            placeholder="Exemplo 12"
+          />
+        </div>
+        
+        <div>
+          <label class="label label-combustivel" for="alcool">Preço do Álcool (R$)</label>
+          <input
+            class="input input-combustivel"
+            type="number"
+            id="alcool"
+            placeholder="Exemplo 3.90"
+          />
+        </div>
+      
+        <div>
+          <label class="label label-combustivel" for="consumoAlcool">Consumo Álcool (km/l)</label>
+          <input
+            class="input input-combustivel"
+            type="number"
+            id="consumoAlcool"
+            placeholder="Exemplo 10"
+          />
+        </div>
+        
+      </form>
+      <div>
+        <label class="label label-combustivel" for="kmPercorrido">Distância total da viagem (km)</label>
+        <input
+          class="input input-combustivel"
+          type="number"
+          id="kmPercorrido"
+          placeholder="Exemplo 200"
+        />
+      </div>
+      <div>
+        <button class="button" id="kmButton">Calcular</button>
+        <button class="buttonReset" id="button-reset-combustivel">Limpar</button>
+      </div>
+      <p id="result-combustivel"></p>
+    </section>
+    
+  </body>
+</html>
