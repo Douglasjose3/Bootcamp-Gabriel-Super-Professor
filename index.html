@@ -11,31 +11,22 @@
 
     <!-- Fuso Horário -->
      <!-- key do tempo: af8362666c3dae38f850242223ed3719 -->
-     <section class="section section--fuso">
-      <h1 class="heading">Fuso horário</h1>
-      <form class="section section--fuso">
-        <select id="Fuso">
-          <option value="" id="searchCity">Cidades</option>
-        </select>
-        <ul>
-          <li>
-            <p id="fusoTempo">Tempo</p>
-          </li>
-          <li>
-            <p id="fusoHorario">Fuso horário</p>
-          </li>
-          <li>
-            <p id="fusoPais">País</p>
-          </li>
-          <li>
-            <p id="fusoCapital">Capital</p>
-          </li>
-          <li>
-            <p id="fusoContinente">Continente</p>
-          </li>
-        </ul>
-      </form>
-     </section>
+     <section class="section section--weather">
+      <h1 class="heading">Weather and Time</h1>
+      <div>
+        <h2>Current Location</h2>
+        <p id="currentLocation">Fetching your location...</p>
+        <p id="currentWeather">Weather: -</p>
+        <p id="currentTime">Time: -</p>
+      </div>
+      <div>
+          <h2>Select a City</h2>
+            <input type="text" id="cityInput" class="input" placeholder="Enter a city name" />
+            <button id="searchCity" class="button button--weather">Search</button>
+            <p id="cityWeather">Weather: -</p>
+            <p id="cityTime">Time: -</p>         
+        </div>
+    </section>
 
     <!-- Conversor de medidas-->
     <section class="section section-medidas">
@@ -111,7 +102,7 @@
 
     <!-- Contagem regressiva para o Ano Novo -->
     <section class="section section--new-year">
-      <h1 class="heading">Falta pouco</h1>
+      <h1 class="heading">Falta pouco para o natal</h1>
       <div class="container">
         <div class="timer">
           <span class="timer__value" id="days">45</span>

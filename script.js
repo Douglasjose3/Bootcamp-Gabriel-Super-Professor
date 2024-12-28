@@ -5,7 +5,7 @@ import { searchEarthquakes } from "./earthQuake.js";
 import { calculaQuantidade } from "./compraDolar.js";
 import { updateCountdown } from "./scriptNewYear.js";
 import { converterMedidas } from "./conversorDeMedidas.js";
-import { fusoHorario } from "./fusoHorario.js";
+import { updateCurrentLocationWeather } from "./previsoDoTempo.js";
 
 mostraMelhorOpcao();
 startFunctions();
@@ -14,4 +14,4 @@ searchEarthquakes();
 calculaQuantidade();
 updateCountdown();
 converterMedidas();
-fusoHorario();
+updateCurrentLocationWeather();
